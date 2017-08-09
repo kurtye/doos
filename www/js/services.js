@@ -1,9 +1,1 @@
-angular.module('app.services', [])
-
-.factory('BlankFactory', [function(){
-
-}])
-
-.service('BlankService', [function(){
-
-}]);
+angular.module('app.services', ['usuarioServices'])
