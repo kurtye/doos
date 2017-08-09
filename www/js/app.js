@@ -9,7 +9,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services',])
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services','app.configs',])
 
 
 
@@ -24,7 +24,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
 })
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,CONFIG) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -36,7 +36,18 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+  })
+
+  //Inicialização do Firebase
+  firebase.initializeApp({
+    apiKey: CONFIG.FIREBASE_API,
+    authDomain: CONFIG.FIREBASE_AUTH_DOMAIN,
+    databaseURL: CONFIG.FIREBASE_DB_URL,
+    storageBucket: CONFIG.FIREBASE_STORAGE,
+    messagingSenderId: CONFIG.FIREBASE_STORAGE
   });
+
+  // console.log(apiKey)
 })
 
 /*
