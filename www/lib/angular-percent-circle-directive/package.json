@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-percent-circle-directive@^1.1.1",
+        "scope": null,
+        "escapedName": "angular-percent-circle-directive",
+        "name": "angular-percent-circle-directive",
+        "rawSpec": "^1.1.1",
+        "spec": ">=1.1.1 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\kurty\\IdeaProjects\\Doos"
+    ]
+  ],
+  "_from": "angular-percent-circle-directive@>=1.1.1 <2.0.0",
+  "_id": "angular-percent-circle-directive@1.1.1",
+  "_inCache": true,
+  "_location": "/angular-percent-circle-directive",
+  "_nodeVersion": "6.9.4",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-percent-circle-directive-1.1.1.tgz_1487690785285_0.8640758742112666"
+  },
+  "_npmUser": {
+    "name": "ryanrombough",
+    "email": "drrombough@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-percent-circle-directive@^1.1.1",
+    "scope": null,
+    "escapedName": "angular-percent-circle-directive",
+    "name": "angular-percent-circle-directive",
+    "rawSpec": "^1.1.1",
+    "spec": ">=1.1.1 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-percent-circle-directive/-/angular-percent-circle-directive-1.1.1.tgz",
+  "_shasum": "7d00336eddfb09a984138f27297fb9eedf63cb81",
+  "_shrinkwrap": null,
+  "_spec": "angular-percent-circle-directive@^1.1.1",
+  "_where": "C:\\Users\\kurty\\IdeaProjects\\Doos",
+  "author": {
+    "name": "Ryan Rombough",
+    "email": "drrombough@gmail.com",
+    "url": "http://www.ryanrombough.com"
+  },
+  "dependencies": {},
+  "description": "An Angular directive for adding an animated percent circle.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7d00336eddfb09a984138f27297fb9eedf63cb81",
+    "tarball": "https://registry.npmjs.org/angular-percent-circle-directive/-/angular-percent-circle-directive-1.1.1.tgz"
+  },
+  "gitHead": "4c6389f71c71b35de0685ec51ca67b6d33c6e49c",
+  "keywords": [
+    "angular",
+    "directive",
+    "angularjs",
+    "percent",
+    "percentage",
+    "circle",
+    "arch",
+    "animate",
+    "animated",
+    "animation"
+  ],
+  "license": "MIT",
+  "main": "dist/percent-circle-directive.js",
+  "maintainers": [
+    {
+      "name": "ryanrombough",
+      "email": "drrombough@gmail.com"
+    }
+  ],
+  "name": "angular-percent-circle-directive",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.1"
+}
