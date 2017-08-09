@@ -1,1 +1,1 @@
-angular.module('app.services', ['usuarioServices'])
+angular.module('app.services', ['usuarioServices',  'eventoServices'])
