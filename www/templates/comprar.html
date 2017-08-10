@@ -8,29 +8,30 @@
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
 
-    <a class="list card" style="display:block;text-decoration:none;background: #333;"
-       ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212">
-      <div class=" item item-image" style="border: none;">
+    <div  ng-repeat="(key, evento) in eventos">
+      <a class="list card" style="display:block;text-decoration:none;background: #333;"
+         ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212">
+        <div class=" item item-image" style="border: none;">
 
-        <div style="width: 115px; height: 30px; background: #333; position: absolute; border-radius: 25px; left: 0;
+          <div style="width: 115px; height: 30px; background: #333; position: absolute; border-radius: 25px; left: 0;
                     top: 30px; right:0; margin-left:auto; margin-right:auto; color: #fff; font-size: 12px;
         ">
-          Liberado.
+            Liberado.
+          </div>
+          <button class="button button-balanced"
+                  style="position: absolute;top: 118px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;">
+            Comprar
+          </button>
+          <img src="{{evento.foto}}"
+               style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
         </div>
-        <button class="button button-balanced"
-                style="position: absolute;top: 118px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;">
-          Comprar
-        </button>
-        <img src="img/ITgmYr2UR4yuDL6EC9rE_comprar.jpg"
-             style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
-      </div>
-      <div style="background-color:#333;height: 22PX;margin-bottom: 5px; ">
+        <div style="background-color:#333;height: 22PX;margin-bottom: 5px; ">
 
-        <p style="color:#FFFFFF;margin: 5px;">Maratona - Quero ver quem me pega !</p>
+          <p style="color:#FFFFFF;margin: 5px;">{{evento.titulo}}</p>
 
-      </div>
-    </a>
-
+        </div>
+      </a>
+    </div>
 
   </ion-content>
 </ion-view>

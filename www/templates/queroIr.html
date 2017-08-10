@@ -1,18 +1,22 @@
-<ion-view  id="page17" style="background-color:#000000;">
+<ion-view id="page17" style="background-color:#000000;">
 
-  <ion-nav-title>
-    <img class="title-image" src="img/f93r72m5Rcudl8p1XBE1_AppleIpadRetina-IphoneIcon-144X144px-13.png"  style="width: 46px;">
-  </ion-nav-title>
-  <ion-nav-buttons side="left" class="has-header">
-    <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
-  </ion-nav-buttons>
-  <ion-content padding="true" class="has-header">
-    <a class="list card" style="display:block;text-decoration:none;background: #333;" ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212">
+    <ion-nav-title>
+        <img class="title-image" src="img/f93r72m5Rcudl8p1XBE1_AppleIpadRetina-IphoneIcon-144X144px-13.png"
+             style="width: 46px;">
+    </ion-nav-title>
+    <ion-nav-buttons side="left" class="has-header">
+        <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
 
-      <div class="demo-percent-container">
-        <percent-circle percent="percent"></percent-circle>
-      </div>
-      <div style="
+
+        <a class="list card" style="display:block;text-decoration:none;background: #333;"
+           ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212" ng-repeat="evento in eventos">
+
+            <div class="demo-percent-container">
+                <percent-circle percent="percent"></percent-circle>
+            </div>
+            <div style="
                     width: 192px;
                     height: 49px;
                     background: #333;
@@ -28,33 +32,28 @@
                     line-height: 41px;
                     text-align: center;
         ">
-        Esperando Você.
-      </div>
-        <button class="button button-positive"
-                style="position: absolute;top: 118px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;">
-          Quero Ir.
-        </button>
-        <img src="img/FKJ2Ve0PSL65l41fbxC4_Site-img1c.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
-      </div>
+                Esperando Você.
+            </div>
+            <button class="button button-positive"
+                    style="position: absolute;top: 118px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;">
+                Quero Ir.
+            </button>
+            <img src="{{evento.foto}}"
+                 style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+            </div>
 
 
+            <p style="color:#FFFFFF;margin: 5px;" {{evento.titulo}}</p>
 
 
-   <p style="color:#FFFFFF;margin: 5px;">Maratona - Quero ver quem me pega !</p>
+        </a>
 
-
-
-
-
-    </a>
-
-    <label for="percent" style="
+        <label for="percent" style="
     color: #fff;
 ">Coloque um valor em porcentagem</label>
-    <input class="input-btn" type="number" id="percent" ng-model="newPercent">
-    <button class="input-btn" ng-click="changePercent(newPercent)">Mudar</button>
+        <input class="input-btn" type="number" id="percent" ng-model="newPercent">
+        <button class="input-btn" ng-click="changePercent(newPercent)">Mudar</button>
 
 
-
-  </ion-content>
+    </ion-content>
 </ion-view>

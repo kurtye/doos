@@ -6,15 +6,17 @@
     <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
-    <a class="list card" style="display:block;text-decoration:none;background: #333;" ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212">
+
+
+    <div class="list card" style="display:block;text-decoration:none;background: #333;" ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212" ng-repeat="evento in eventos">
       <div class=" item item-image" style="border: none;">
-        <img src="img/ITgmYr2UR4yuDL6EC9rE_comprar.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        <img src="{{evento.foto}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
       </div>
       <div style="background-color:#333;height: 22PX;margin-bottom: 5px; ">
 
-        <p style="color:#FFFFFF;margin: 5px;">Maratona - Quero ver quem me pega !</p>
+        <p style="color:#FFFFFF;margin: 5px;">{{evento.titulo}}</p>
 
       </div>
-    </a>
+    </div>
   </ion-content>
 </ion-view>
