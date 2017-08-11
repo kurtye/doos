@@ -8,7 +8,7 @@
   <ion-content padding="true" class="has-header">
 
 
-    <div class="list card" style="display:block;text-decoration:none;background: #333;" ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212" ng-repeat="evento in eventos">
+    <div class="list card" style="display:block;text-decoration:none;background: #333;" ng-click="irParaEvento(evento.id)" id="comprar-card212" ng-repeat="evento in eventos">
       <div class=" item item-image" style="border: none;">
         <img src="{{evento.foto}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
       </div>

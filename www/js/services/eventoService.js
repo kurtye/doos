@@ -20,4 +20,8 @@ angular.module('eventoServices', []).service('eventoService', [function () {
         return firebase.database().ref('eventos/' + evento.id).set(evento);
 
     };
+
+    this.getDetalhesEvento = function (id) {
+        return firebase.database().ref('eventos').orderByChild('id').equalTo(id);
+    };
 }]);

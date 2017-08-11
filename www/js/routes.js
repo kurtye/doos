@@ -51,13 +51,14 @@ angular.module('app.routes', [])
                 controller: 'loginCtrl'
             })
 
-            .state('tabsController.pGinaDoEvento', {
-                url: '/pagEvento',
+            .state('tabsController.pGinaDoEvento/:id', {
+                url: '/pagEventoq/:id',
                 views: {
                     'tab2': {
                         templateUrl: 'templates/pGinaDoEvento.html',
-                        controller: 'pGinaDoEventoCtrl'
+                        controller: 'pGinaDoEventoCtrl',
                     }
+
                 }
             })
 
