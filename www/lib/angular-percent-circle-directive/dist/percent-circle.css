@@ -7,14 +7,14 @@
 
   position: absolute;
   position: absolute !important;
-  left: 84px;
-  top: 24px;
+  left: -17px;
+  top: -2px;
   text-align: center !important;
-  width: 13% !important;
+  width: 28% !important;
   padding: 0px;
   font-size: 6px;
-  height: 13%;
-  padding-top: 13% !important;
+  height: 62%;
+  padding-top: 28% !important;
   border-radius: 100% !important;
   z-index: 999;
 }
