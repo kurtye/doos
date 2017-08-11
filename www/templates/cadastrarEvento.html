@@ -6,6 +6,8 @@
     <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
+
+    <form ng-submit="addEvento(evento)" name="form">
     <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
       <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
     </div>
@@ -13,20 +15,31 @@
     <form id="cadastrarEvento-form1" class="list">
       <label class="item item-input item-stacked-label" id="cadastrarEvento-input3">
         <span class="input-label">Nome do Evento</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="" ng-model="evento.titulo">
       </label>
       <label class="item item-input item-stacked-label" id="cadastrarEvento-input1">
         <span class="input-label">Subtítulo</span>
-        <input type="text" placeholder="Descrição do evento 140 caracteres">
+        <input type="text" placeholder="Descrição do evento 140 caracteres" ng-model="evento.subtitulo">
       </label>
       <label class="item item-input item-stacked-label" id="cadastrarEvento-input2">
         <span class="input-label">Quero Ir</span>
-        <input type="number" placeholder="Quantidade Pessoas para Realizar">
+        <input type="number" placeholder="Quantidade Pessoas para Realizar"  ng-model="evento.qtdPessoas">
       </label>
       <label class="item item-input item-stacked-label" id="cadastrarEvento-input4">
         <span class="input-label">Descrição</span>
-        <input type="number" placeholder="Descrição completa do Evento">
+        <input type="text" placeholder="Descrição completa do Evento"  ng-model="evento.descricao">
       </label>
+
+      <label class="item item-input item-stacked-label" id="cadastrarEvento-input5">
+        <span class="input-label">Foto</span>
+        <input type="text" placeholder="url"  ng-model="evento.foto">
+      </label>
+
+        <input type="hidden" placeholder="Descrição completa do Evento"  ng-init="evento.status=1" ng-model="evento.status">
+
+      <button class="button button-full button-assertive" ng-click="addEvento(evento)"  >Publicar</button>
+      {{evento}}
+    </form>
     </form>
   </ion-content>
 </ion-view>
