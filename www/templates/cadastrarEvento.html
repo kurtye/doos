@@ -12,7 +12,7 @@
       <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
     </div>
     <button id="cadastrarEvento-button18" class="button button-dark button-block">Imagem do Evento</button>
-    <form id="cadastrarEvento-form1" class="list">
+    <div id="cadastrarEvento-form1" class="list">
       <label class="item item-input item-stacked-label" id="cadastrarEvento-input3">
         <span class="input-label">Nome do Evento</span>
         <input type="text" placeholder="" ng-model="evento.titulo">
@@ -37,9 +37,9 @@
 
         <input type="hidden" placeholder="Descrição completa do Evento"  ng-init="evento.status=1" ng-model="evento.status">
 
-      <button class="button button-full button-assertive" ng-click="addEvento(evento)"  >Publicar</button>
+      <button class="button button-full button-assertive" type="submit">Publicar</button>
       {{evento}}
-    </form>
+    </div>
     </form>
   </ion-content>
 </ion-view>

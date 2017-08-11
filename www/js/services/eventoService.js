@@ -12,4 +12,12 @@ angular.module('eventoServices', []).service('eventoService', [function () {
         return firebase.database().ref('eventos').orderByChild('status').equalTo(1);
     }
 
+    this.getNewKey = function () {
+        return firebase.database().ref('eventos').push();
+    };
+
+    this.newEvento = function (evento) {
+        return firebase.database().ref('eventos/' + evento.id).set(evento);
+
+    };
 }]);
