@@ -6,12 +6,19 @@
     <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
+    <div class="row">
+      <div class="col text-center">
+        <i class="icon icon ion-camera" ></i>
+        <input type="file" class="upload" onchange="previewFile()" id="files" value="{{imgURL}}" name="files[]" multiple/>
+      </div>
+    </div>
+
 
     <form ng-submit="addEvento(evento)" name="form">
     <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
       <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
     </div>
-    <button id="cadastrarEvento-button18" class="button button-dark button-block">Imagem do Evento</button>
+
     <div id="cadastrarEvento-form1" class="list">
       <label class="item item-input item-stacked-label" id="cadastrarEvento-input3">
         <span class="input-label">Nome do Evento</span>
