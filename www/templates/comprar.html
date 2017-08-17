@@ -1,10 +1,10 @@
 <ion-view title="Comprar" id="page3" style="background-color:#000000;">
 
   <ion-nav-title>
-    <img class="title-image" src="img/f93r72m5Rcudl8p1XBE1_AppleIpadRetina-IphoneIcon-144X144px-13.png"  style="width: 46px;">
+    <img class="title-image" src="img/f93r72m5Rcudl8p1XBE1_AppleIpadRetina-IphoneIcon-144X144px-13.png"  style="width: 60px;">
   </ion-nav-title>
   <ion-nav-buttons side="left" class="has-header">
-    <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
+    <i ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></i>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
 
@@ -13,13 +13,16 @@
          ui-sref="tabsController.pGinaDoEvento()" id="comprar-card212">
         <div class=" item item-image" style="border: none;">
 
-          <div style="width: 115px; height: 30px; background: #333; position: absolute; border-radius: 25px; left: 0;
-                    top: 30px; right:0; margin-left:auto; margin-right:auto; color: #fff; font-size: 12px;
-        ">
-            Liberado.
+          <div style=" width: 192px; height: 49px; background: #333; position: absolute; border-radius: 25px 25px 25px 25px;
+            left: 13px; top: 23px; right:0; margin-left:auto; margin-right:auto;  line-height: 41px;
+             text-align: center;">
+            <div style="position: absolute !important;left: -1px;top: -9px;text-align: center !important;width: 39% !important; padding: 0px; height: 62%;padding-top: 28% !important;border-radius: 100% !important;z-index: 9999;">
+              <img src="img/checked.png" style="width: 100%;position: absolute !important;left: -17px;top: -2px;/* text-align: center !important; */width: 100%;/* padding: 0px; *//* font-size: 6px; *//* height: 62%; *//* padding-top: 28% !important; *//* border-radius: 100% !important; *//* z-index: 9999; */">
+            </div>
+            <p style="margin-top:3px; color: #fff;font-size: 12px;">Aprovado.</p>
           </div>
           <button class="button button-balanced"
-                  style="position: absolute;top: 118px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;">
+                  style="position: absolute;bottom: 5px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;">
             Comprar
           </button>
           <img src="{{evento.foto}}"
