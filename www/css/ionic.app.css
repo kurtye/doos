@@ -26,6 +26,12 @@ $dark:                            #444 !default;
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url('../fonts/AvenirLTStd-Light.otf');
+}
+
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -3309,6 +3315,15 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.button .icon:before, .button.icon:before, .button.icon-left:before, .button.icon-right:before {
+  display: inline-block;
+  padding: 0px 0 1px 0;
+  vertical-align: inherit;
+  font-size: 20px !important;
+  line-height: 19px;
+  pointer-events: none;
+}
+
 html {
   overflow: hidden;
   -ms-touch-action: pan-y;
@@ -3339,7 +3354,7 @@ body,
   word-wrap: break-word;
   font-size: 14px;
   font-family: -apple-system;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  font-family: "Avenir-Light","-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 20px;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
@@ -3527,9 +3542,20 @@ ion-infinite-scroll {
 .has-subfooter {
   bottom: 88px; }
 
+
+a.tab-item.tab-item-active {
+  margin-top: -2px;
+  color: #fff;
+  border-style: solid;
+  border-color: #fff;
+  margin-top: 1px;
+  border-width: 0px 0px 2px 0px !important;
+  border-style: solid;
+}
+
 .has-tabs,
 .bar-footer.has-tabs {
-  bottom: 49px; }
+  top: 93px; }
   .has-tabs.pane,
   .bar-footer.has-tabs.pane {
     bottom: 49px;
@@ -3595,7 +3621,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #000;
   font-weight: 500;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  font-family: "Avenir-Light","-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
   .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
@@ -3722,6 +3748,20 @@ a.subdued {
  * Action Sheets
  * --------------------------------------------------
  */
+
+.tab-nav.tabs {
+  top: 44px;
+  padding-top: 0;
+  background-position: bottom;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+}
+.tabs-dark > .tabs, .tabs.tabs-dark {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: #000;
+  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);
+  color: #fff;
+}
 .action-sheet-backdrop {
   -webkit-transition: background-color 150ms ease-in-out;
   transition: background-color 150ms ease-in-out;
@@ -4039,7 +4079,7 @@ a.subdued {
       font-size: 17px; }
       .bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
         vertical-align: top;
-        font-size: 32px;
+        font-size: 25px;
         line-height: 32px; }
     .bar .button.button-clear, .bar button.button-clear {
       padding-right: 2px;
@@ -4095,8 +4135,13 @@ a.subdued {
 .platform-android .bar .title {
   text-align:center;
   font-size: 19px;
-  line-height: 44px; }
-
+  line-height: 44px;
+  left: 0 !important;
+  right: 0 !important;
+  }
+img.title-image {
+  width: 60px !important;
+}
 .bar-light .button {
   border-color: #ddd;
   background-color: white;
@@ -4486,7 +4531,7 @@ a.subdued {
   background-color: white;
   background-image: none;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   padding-top: 2px; }
 
 .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
@@ -5121,7 +5166,7 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   white-space: nowrap;
   font-weight: 400;
   font-size: 14px;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  font-family: "Avenir-Light","-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   opacity: 0.7; }
   .tab-item:hover {
     cursor: pointer; }
@@ -7551,7 +7596,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif; }
+  font-family: "Avenir-Light","-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif; }
 
 .item-input {
   display: -webkit-box;
