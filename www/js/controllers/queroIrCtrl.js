@@ -16,4 +16,8 @@ angular.module('queroIrCtrls', []).controller('queroIrCtrl', ['$scope', '$stateP
             eventos.unshift(snap.val());
         });
 
-    }])
+        $scope.like = function (id) {
+            eventoService.setCount(id);
+        };
+
+    }]);
