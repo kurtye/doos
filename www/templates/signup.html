@@ -1,0 +1,75 @@
+<ion-view hide-back-button="false" title="Signup" hide-nav-bar="false" >
+  <ion-content class="has-header">
+
+    <form name="form_signup" ng-submit="doSignup(userSignup)" novalidate>
+      <div class="list">
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Nome</span>
+          <input type="text" ng-model="$parent.userSignup.displayname" id="display_name" placeholder="Nome">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Foto do Perfil</span>
+          <input type="text" ng-model="$parent.userSignup.photoprofile" id="photo_profile" placeholder="Foto">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="$parent.userSignup.cusername" id="cuser_name" placeholder="Email">
+        </label>
+
+        <label class="item item-input item-select">
+
+          <div class="input-label">
+            Estado
+          </div>
+          <select ng-model="$parent.userSignup.state" id="state" required="required">
+            <option value="">Selecione</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espirito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </label>
+
+
+      </div>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Senha</span>
+        <input type="text" ng-model="$parent.userSignup.cpassword" id="cuser_pass" placeholder="Senha">
+      </label>
+
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-calm">Cadastrar</button>
+      </div>
+    </form>
+
+
+  </ion-content>
+</ion-view>
