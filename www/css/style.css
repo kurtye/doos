@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url('../fonts/AvenirLTStd-Light.otf');
+}
+
 body {
   font-family: Helvetica, Arial, Sans-Serif;
 }
