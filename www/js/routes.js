@@ -18,7 +18,11 @@ angular.module('app.routes', [])
                     }
                 }
             })
-
+          .state('signup', {
+            url: '/signup',
+            templateUrl: "templates/signup.html",
+            controller: "signupCtrl"
+          })
             .state('tabsController.principal', {
                 url: '/principal',
                 views: {
