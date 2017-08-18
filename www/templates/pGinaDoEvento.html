@@ -1,22 +1,35 @@
 <ion-view title="Página do Evento" id="page8" style="background-color:#000000;">
-  <ion-nav-title>
-    <img class="title-image" src="img/f93r72m5Rcudl8p1XBE1_AppleIpadRetina-IphoneIcon-144X144px-13.png"  style="width: 46px;">
-  </ion-nav-title>
-  <ion-nav-buttons side="left" class="has-header">
-    <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
-  </ion-nav-buttons>
-  <ion-content padding="true" class="has-header">
-    <div class="list card" id="pGinaDoEvento-card24">
-      <div class=" item item-image">
-        <img src="{{evento.foto}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
-      </div>
-      <button id="pGinaDoEvento-button11" style="font-weight:lighter;text-align:left;" class="button button-dark button-small button-block">{{evento.titulo}}</button>
-      <div class="item item-body" id="pGinaDoEvento-list-item-container4">
-        <div id="pGinaDoEvento-markdown4" class="show-list-numbers-and-dots">
-          <p style="margin-top:0px;color:#000000;">{{evento.descricao}}</p>
+    <ion-nav-title>
+        <img class="title-image" src="img/f93r72m5Rcudl8p1XBE1_AppleIpadRetina-IphoneIcon-144X144px-13.png"
+             style="width: 46px;">
+    </ion-nav-title>
+    <ion-nav-buttons side="left" class="has-header">
+        <a ui-sref="tabsController.principal()" class="button button-icon icon ion-android-home"></a>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <div class="list card" id="pGinaDoEvento-card24">
+            <div class=" item item-image">
+                <img src="{{evento.foto}}"
+                     style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+            </div>
+            <button id="pGinaDoEvento-button11" style="font-weight:lighter;text-align:left;"
+                    class="button button-dark button-small button-block">{{evento.titulo}}
+            </button>
+            <div class="item item-body" id="pGinaDoEvento-list-item-container4">
+                <div id="pGinaDoEvento-markdown4" class="show-list-numbers-and-dots">
+                    <p style="margin-top:0px;color:#000000;">{{evento.descricao}}</p>
+                </div>
+            </div>
+            <div ng-show="aprovado">
+                <div ng-if="aprovado == 2">
+                    <button class="button button-balanced button-block">Comprar</button>
+                </div>
+                <div ng-if="aprovado == 1">
+                    <button class="button button-balanced button-block" ng-disabled="apoiado" ng-click="apoiar(evento.id)">
+                        Apoiar
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-      <button id="pGinaDoEvento-button12" class="button button-balanced button-block">Comprar</button>
-    </div>
-  </ion-content>
+    </ion-content>
 </ion-view>

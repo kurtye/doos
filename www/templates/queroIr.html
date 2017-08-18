@@ -10,7 +10,7 @@
     <ion-content padding="true" class="has-header">
 
 
-        <a class="list card" style="display:block;text-decoration:none;background: #333;"  id="comprar-card212" ng-repeat="evento in eventos">
+        <a class="list card" style="display:block;text-decoration:none;background: #333;" ng-click="irParaEvento(evento.id)" ng-repeat="evento in eventos">
 
 
             <div style=" width: 192px; height: 49px; background: #333; position: absolute; border-radius: 25px 25px 25px 25px;
@@ -29,7 +29,7 @@
                </span>
               <p style="margin-top:3px; color: #fff;font-size: 12px;">Esperando Você.</p>
             </div>
-            <button class="button button-positive" style="position: absolute;bottom: 35px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;" ng-click="like(evento.id)">Quero Ir.</button>
+            <button class="button button-positive" style="position: absolute;bottom: 35px;right: 10px;min-width: 85px;min-height: 20px;line-height: 30px;">Quero Ir.</button>
             <img src="{{evento.foto}}"
                  style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
             </div>

@@ -1,16 +1,24 @@
 angular.module('eventoServices', []).service('eventoService', ['usuarioService', function (usuarioService) {
 
+    this.verificarBotao = function (evento) {
+        return firebase.database().ref('eventos/' + evento + '/status');
+    };
+
+    this.verificarApoio = function () {
+        return firebase.database().ref('usuarios/' + 1 + '/queroIr');
+    };
+
     this.getEventos = function () {
         return firebase.database().ref('eventos');
-    }
+    };
 
     this.getEventosAbertos = function () {
         return firebase.database().ref('eventos').orderByChild('status').equalTo(2);
-    }
+    };
 
     this.getProjetos = function () {
         return firebase.database().ref('eventos').orderByChild('status').equalTo(1);
-    }
+    };
 
     this.getNewKey = function () {
         return firebase.database().ref('eventos').push();
@@ -45,14 +53,12 @@ angular.module('eventoServices', []).service('eventoService', ['usuarioService',
                     statusRef.set(2).then(function (result) {
                         return "Status Alterado";
                     });
-                }else {
+                } else {
                     return;
                 }
 
             });
         });
-
-
     };
 
     // retorna o array com os ids dos eventos que o usuario quis ir;
@@ -67,12 +73,18 @@ angular.module('eventoServices', []).service('eventoService', ['usuarioService',
         var queroIrRef = firebase.database().ref('usuarios/' + 1 + '/queroIr');
         queroIrRef.once('value', function (snap) {
             var hist = snap.val();
-            hist.unshift(evento);
-            queroIrRef.set(hist).then(function (result) {
-                return result;
-            });
+            if (!snap.val()) {
+                var hist = [];
+                hist.push(evento);
+                queroIrRef.set(hist).then(function (result) {
+                    return result;
+                })
+            } else {
+                hist.unshift(evento);
+                queroIrRef.set(hist).then(function (result) {
+                    return result;
+                });
+            }
         });
-
-
     }
 }]);
