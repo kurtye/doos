@@ -25,7 +25,7 @@ angular.module('pGinaDoEventoCtrls', []).controller('pGinaDoEventoCtrl', ['$scop
                 $scope.apoiado = true;
                 console.log('true');
 
-            } else {
+            } else if(!snap.val()) {
                 $scope.apoiado = false;
                 console.log('false');
             }
