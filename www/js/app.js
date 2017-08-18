@@ -1,28 +1,34 @@
 // Ionic Starter App
 
-
-
-
-
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers','ngCordova', 'app.routes', 'app.directives','app.services','app.configs'])
+angular.module('app', ['ionic','ionic.cloud', 'app.controllers','ngCordova', 'app.routes', 'app.directives','app.services','app.configs',])
+
+.config(['$httpProvider', '$ionicConfigProvider', '$sceDelegateProvider', '$stateProvider', '$ionicCloudProvider',
+  function($httpProvider, $ionicConfigProvider, $sceDelegateProvider, $stateProvider, $ionicCloudProvider) {
 
 
+  $ionicCloudProvider.init({
+    "core": {
+      "app_id": "de014e48"
+    },
+    "auth": {
+      "facebook": {
+        "scope": ["permission1", "permission2"]
+      }
+    }
+  });
 
-
-
-.config(function($ionicConfigProvider, $sceDelegateProvider){
     $ionicConfigProvider.backButton.text('').previousTitleText(false);
 
 
 
   $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
 
-})
+  }])
 
 .run(function($ionicPlatform,CONFIG) {
   $ionicPlatform.ready(function() {
