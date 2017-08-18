@@ -6,9 +6,9 @@
 			restrict: 'E',
 			replace: true,
 			template: 	'<div class="pc-container">' +
-							'<div class="pc-border" ng-style="highlight">' + 
-								'<div class="pc-circle">' + 
-									'<span class="pc-percent">{{curPercent}}%</span>' +
+							'<div class="pc-border" ng-style="highlight">' +
+								'<div class="pc-circle">' +
+									'<span class="pc-percent" >{{curPercent}}%</span>' +
 								'</div>' +
 							'</div>' +
 						'</div>',
@@ -38,7 +38,7 @@
 
 					element[0].querySelector('.pc-border').style.backgroundColor = colors.highlight;
 					element[0].querySelector('.pc-circle').style.backgroundColor = colors.center;
-					
+
 					setHighlight($scope.curPercent);
 				}
 				setColors();
@@ -79,7 +79,7 @@
 						newVal = Math.round(newVal);
 						if(newVal > 100) newVal = 100;
 						if(newVal < 0) newVal = 0;
-						
+
 						if($scope.speed) {
 							// checks oldVal against currently displayed percent to prevent animation jump
 							var startVal = (oldVal !== $scope.curPercent) ? $scope.curPercent : oldVal;
