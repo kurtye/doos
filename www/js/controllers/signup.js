@@ -1,5 +1,5 @@
-angular.module('signupCtrls', []).controller('signupCtrl', ['$scope', '$stateParams', '$document', '$state', 'UsuarioService',
-  function ($scope, $stateParams, $document, $state, UsuarioService) {
+angular.module('signupCtrls', []).controller('signupCtrl', ['$scope', '$stateParams', '$document', '$state', 'usuarioService',
+  function ($scope, $stateParams, $document, $state, usuarioService) {
 
     $scope.doSignup = function (userSignup) {
 
@@ -29,7 +29,7 @@ angular.module('signupCtrls', []).controller('signupCtrl', ['$scope', '$statePar
 
 
 
-          UsuarioService.setUser({
+          usuarioService.setUser({
             "displayName": userSignup.displayname,
             "email": user.email,
             "imageUrl": user.photoURL,
